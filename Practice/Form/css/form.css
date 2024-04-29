@@ -1,0 +1,22 @@
+table{
+    width: 35rem;
+    
+}
+td{
+    border-style: none;
+}
+.outer-table{
+    border-collapse: collapse;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+th{
+    padding-top: 1.2rem;
+}
+#firstNameInvalid, #lastNameInvalid, #emailInvalid, #phoneNumberInvalid, #passwordInvalid, #genderInvalid, #addressInvalid, #languagesInvalid, #fieldOfInterestInvalid{
+    visibility: hidden;
+    color: red;
+}
