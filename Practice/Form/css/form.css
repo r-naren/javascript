@@ -16,11 +16,20 @@ table{
 th{
     padding-top: 1.2rem;
 }
+#table-output table td{
+    padding-left: .5rem;
+}
 #firstNameInvalid, #lastNameInvalid, #emailInvalid, #phoneNumberInvalid, #passwordInvalid, #genderInvalid, #addressInvalid, #languagesInvalid, #fieldOfInterestInvalid, #fileInvalid{
     visibility: hidden;
     color: red;
 }
+.inner-table td{
+    border-style: none;
+}
 #table-output{
 
     display: none;
+}
+h1, th{
+    text-align: center;
 }
