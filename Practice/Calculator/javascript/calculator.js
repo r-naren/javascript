@@ -2,6 +2,7 @@ function appendToDisplay(value) {
     if(document.getElementById('display').value !="undefined"){
         document.getElementById('display').value += value;
     }
+    
     else{
         document.getElementById('display').value = value;
 

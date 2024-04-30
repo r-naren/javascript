@@ -8,128 +8,194 @@
 </head>
 <body>
     <div class="container">
+        <div id="form">
+            <form onsubmit="return validation()" action="" >
+            
+                <table  class = "outer-table" border="3px solid black"  width="50%">
+                    <tr>
+                        <td>
+                            <table border="1px solid black" width="100%" cellspacing="10">
+                                <tr>
+                                    <th ><h1>Login Form</h1></th>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td>
+                                        <label for="firstName lastName">Name </label>
+                                        <input type="text" id="firstName" placeholder="FirstName" > <input type="text" id="lastName" placeholder="LastName" >
+                                        <span id="firstNameInvalid">FirstName Invalid </span>
+                                        <span id="lastNameInvalid">LastName Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email </label>
+                                        <input type="email" id="email" placeholder="Email" >
+                                        <span id="emailInvalid">Email Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phoneNumber">Phone Number </label>
+                                        <input type="tel" pattern="[6-9]{1}[0-9]{9}" id="phoneNumber" placeholder="10-digit number" >
+                                        <span id="phoneNumberInvalid">PhoneNumber Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="password">Password </label>
+                                        <input type="password" id="password" placeholder="password" >
+                                        <span id="passwordInvalid">Password Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="gender">Gender </label><br>
+                                        <input type="radio" name="gender" id="Male" value="male">
+                                        <label for="male">Male</label><br>
+                                        <input type="radio" name="gender" value="Female" id="female">
+                                        <label for="female">Female</label><br>
+                                        <input type="radio" name="gender" value="Not wish to disclose" id="notwishtodisclose">
+                                        <label for="notwishtodisclose">Not Wish to Disclose</label>
+                                        <span id="genderInvalid">Gender Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="address">Address : </label><br>
+                                        <textarea name="address" id="address" cols="20" rows="5">
+                                        </textarea>
+                                        <span id="addressInvalid">Address Invalid </span>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="dateofbirth">Date of Birth </label><br>
+                                        <input type="date" id="dateofbirth" min="1900/01/01" max="2024/04/25" required>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="time">Time </label><br>
+                                        <input type="time" id="time" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="languages">Languages </label><br>
+                                        <input type="checkbox" id="tamil" name="languages" value="tamil">
+                                        <label for="tamil"> Tamil</label><br>
+                                        <input type="checkbox" id="english" name="languages" value="english">
+                                        <label for="english"> English</label><br>
+                                        <input type="checkbox" id="french" name="languages" value="french">
+                                        <label for="french"> French</label>
+                                        <span id="languagesInvalid">Languages Invalid </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="fieldOfInterest">Select Your field of interest : </label><br>
+                                        <select name="fieldOfInterest" id="fieldOfInterest" multiple size="3">
+                                            <option value="music">Music</option>
+                                            <option value="cycling">Cycling</option>
+                                            <option value="badminton">Badminton</option>
+                                            <option value="football">FootBall</option>
+                                        </select>
+                                        <span id="fieldOfInterestInvalid">Field Of Interest Invalid </span> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="photo">Upload your Photo </label><br>
+                                        <input type="file" id="photo" >
+                                        <span id="fileInvalid">Upload image file </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="submit">Submit</button>
+                                        <button type="reset" value="reset">Reset<br>   
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
         
-        <form onsubmit="return validation()" action="result.html" >
-        
-            <table  class = "outer-table" border="3px solid black"  width="50%">
+    
+        <div id = "table-output">
+            <h1>OUTPUT SCREEN</h1>
+            <table border=".1rem solid black" width="100%">
                 <tr>
+                    <th>SECTION</th>
+                    <th>USER DETAILS</th>
+                </tr>
+                <tr>
+                    <th>USERNAME</th>
+                    <td id="result_Name"></td>
+                </tr>
+                <tr>
+                    <th>EMAIL ID</th>
+                    <td id="result_Email"></td>
+                </tr>
+                <tr>
+                    <th>PHONE NUMBER</th>
+                    <td id="result_PhoneNumber"></td>
+                </tr>
+                <tr>
+                    <th>PASSWORD</th>
+                    <td id="result_Password"></td>
+                </tr>
+                <tr>
+                    <th>GENDER</th>
+                    <td id="result_Gender"></td>
+                </tr>
+                <tr>
+                    <th>CURRENT ADDRESS</th>
+                    <td id="result_Address"></td>
+                </tr>
+                <tr>
+                    <th>DATE OF BIRTH</th>
+                    <td id="result_DateOfBirth"></td>
+                </tr>
+                <tr>
+                    <th>TIME</th>
+                    <td id="result_Time"></td>
+                </tr>
+                <tr>
+                    <th>LANGUAGES</th>
                     <td>
-                        <table border="1px solid black" width="100%" cellspacing="10">
-                            <tr>
-                                <th ><h1>Login Form</h1></th>
-                            </tr>
-                            <tr></tr>
-                            <tr>
-                                <td>
-                                    <label for="firstName lastName">Name </label>
-                                    <input type="text" id="firstName" placeholder="FirstName" > <input type="text" id="lastName" placeholder="LastName" >
-                                    <span id="firstNameInvalid">FirstName Invalid </span>
-                                    <span id="lastNameInvalid">LastName Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="email">Email </label>
-                                    <input type="email" id="email" placeholder="Email" >
-                                    <span id="emailInvalid">Email Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="phoneNumber">Phone Number </label>
-                                    <input type="tel" pattern="[6-9]{1}[0-9]{9}" id="phoneNumber" placeholder="10-digit number" >
-                                    <span id="phoneNumberInvalid">PhoneNumber Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="password">Password </label>
-                                    <input type="password" id="password" placeholder="password" >
-                                    <span id="passwordInvalid">Password Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="gender">Gender </label><br>
-                                    <input type="radio" name="gender" id="male" value="male">
-                                    <label for="male">Male</label><br>
-                                    <input type="radio" name="gender" value="female" id="female">
-                                    <label for="female">Female</label><br>
-                                    <input type="radio" name="gender" value="notwishtodisclose" id="notwishtodisclose">
-                                    <label for="notwishtodisclose">Not Wish to Disclose</label>
-                                    <span id="genderInvalid">Gender Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="address">Address : </label><br>
-                                    <textarea name="address" id="address" cols="20" rows="5">
-                                    </textarea>
-                                    <span id="addressInvalid">Address Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="dateofbirth">Date of Birth </label><br>
-                                    <input type="date" id="dateofbirth" min="1900/01/01" max="2024/04/25" >
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="time">Time </label><br>
-                                    <input type="time" id="time" >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="languages">Languages </label><br>
-                                    <input type="checkbox" id="tamil" name="languages" value="tamil">
-                                    <label for="tamil"> Tamil</label><br>
-                                    <input type="checkbox" id="english" name="languages" value="english">
-                                    <label for="english"> English</label><br>
-                                    <input type="checkbox" id="french" name="languages" value="french">
-                                    <label for="french"> French</label>
-                                    <span id="languagesInvalid">Languages Invalid </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="fieldOfInterest">Select Your field of interest : </label><br>
-                                    <select name="fieldOfInterest" id="fieldOfInterest" multiple size="3">
-                                        <option value="music">Music</option>
-                                        <option value="cycling">Cycling</option>
-                                        <option value="badminton">Badminton</option>
-                                        <option value="football">FootBall</option>
-                                    </select>
-                                    <span id="fieldOfInterestInvalid">Field Of Interest Invalid </span>
-                                
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="photo">Upload your Photo </label><br>
-                                    <input type="file" id="photo" >
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button type="submit">Submit</button>
-                                    <button type="reset" value="reset">Reset<br>   
-                                </td>
-                            </tr>
-                        </table>
+                        <ul>
+                            <li>TAMIL</li>
+                            <li>ENGLISH</li>
+                        </ul>
                     </td>
                 </tr>
+                <tr>
+                    <th>FIELD OF INTEREST</th>
+                    <td>
+                        <ul>
+                            <li>BADMINTON</li>
+                            <li>CRICKET</li>
+                            <li>MUSIC</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>UPLOAD YOUR PICTURE</th>
+                    <td colspan="3"><img src="" width="300" height="150" alt="My Image"></td>
+                </tr>
             </table>
-        </form>
+        </div>
     </div>
 </body>
 </html>

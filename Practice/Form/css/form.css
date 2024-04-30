@@ -2,10 +2,10 @@ table{
     width: 35rem;
     
 }
-td{
-    border-style: none;
-}
 .outer-table{
+    border-collapse: collapse;
+}
+#table-output{
     border-collapse: collapse;
 }
 .container{
@@ -16,7 +16,11 @@ td{
 th{
     padding-top: 1.2rem;
 }
-#firstNameInvalid, #lastNameInvalid, #emailInvalid, #phoneNumberInvalid, #passwordInvalid, #genderInvalid, #addressInvalid, #languagesInvalid, #fieldOfInterestInvalid{
+#firstNameInvalid, #lastNameInvalid, #emailInvalid, #phoneNumberInvalid, #passwordInvalid, #genderInvalid, #addressInvalid, #languagesInvalid, #fieldOfInterestInvalid, #fileInvalid{
     visibility: hidden;
     color: red;
+}
+#table-output{
+
+    display: none;
 }
