@@ -1,0 +1,60 @@
+a{
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    border: .3rem;
+    border-style: solid;
+    border-color: black;
+}
+#top, #content, #result, #footer{
+    margin: 0.2rem;
+    border: .1rem;
+    border-style: solid;
+    border-color: black;
+    padding: 1rem;
+}
+
+td{
+    padding:  0 0.5rem;
+}
+th{
+    padding: 1rem;
+    text-align: left;
+    
+}
+#departmentsInvalid, #bookNameInvalid{
+    display: none;
+}
+span[id$="Invalid"]{
+    color: red;
+}
+#result{
+    display: none;
+}
+img{
+    vertical-align:middle;
+    margin-right: 1.5rem;
+}
+#content-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+button, input[type=button]{
+    margin: 0.5rem 1rem;
+    padding-right: 2.5rem;
+    border-color: lightgrey;
+}
+button:hover, input[type=button]:hover{
+    margin: 0.5rem 1rem;
+    padding-right: 2.5rem;
+    border-color: lightgrey;
+    color: grey;
+    box-shadow: 0.1rem 0.2rem 0 ;
+}
+input{
+    border-width: 0.1rem;
+    border-color: lightgrey;
+}
