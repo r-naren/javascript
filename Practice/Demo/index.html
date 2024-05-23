@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript demo</title>
+    <script src="./javascript/demo.js" type="text/javascript"></script>
+</head>
+<body>
+    <button onclick="buttonClick()">Click me</button>
+    <h2 class="heading2"> This is heading 2</h2>
+    <input type="text" id="username" placeholder = "Enter username">
+    <br><input type="password" id="password" placeholder = "Enter password">
+    <br>
+    <button onclick="validation()">Check</button>
+    <br><br>
+    <input name="gender" id="male" type="radio" value="male">Male
+    <br>
+    <input type="radio" id="female" name="gender" value="female">Female
+    <br>
+    <button onclick="gender()" >Click me</button>
+    <br><br>
+    <select name="languages" id="languages">
+        <option value="Tamil">Tamil</option>
+        <option value="English">English</option>
+        <option value="Telugu">Telugu</option>
+    </select>
+    <button onclick="selectBox()" >Click me</button>
+    <p>To change style</p>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <button onclick="changeStyling()">Click Me</button>
+    <br><br>
+    <p>Oh mouse over and on mouse out</p>
+    <img onmouseover="setNewImage()" onmouseout="setOldImage()" src="./Images/sea.jpg" id="image1" width="400rem" height="300rem" alt="">
+    <br>
+    <p>Form validation</p>
+    <form onsubmit="return loginValidation()" action="message.html">
+        <input type="text" id="username1" placeholder = "Enter username">
+        <label for="emptyUsername" id="emptyUsername" style="visibility: hidden; color: red;">Invalid</label>
+        <br><input type="password" id="password1" placeholder = "Enter password">
+        <br>
+        <button type="submit" >Check</button>
+
+    </form>
+    <br><br>
+    <h1>Regex</h1>
+    <form onsubmit="return regex()" action="message.html">
+        <input type="text" id="username2" placeholder = "Enter username" required>
+        <br><input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone number" required>
+        <br><input type="email" name="email" id="email" required>
+        <br>
+        <button type="submit" >Check</button>
+
+    </form>
+    <br>
+    <button onclick ="fadeOut()" id="fadeOut">Fade Out</button>
+    <br><img id ="img3" src="./Images/sea.jpg" height="30rem" widdth ="40rem" alt="">
+    <button onclick ="fadeIn()" id="fadeIn">Fade In</button>
+    <br><br>
+    <h2>Zoom in and zoom out while focusing on image</h2>
+    <br><img id ="img4" onmouseover="increase()" onmouseout="decrease()" src="./Images/sea.jpg" height="100rem" width ="100rem" alt="">
+ 
+
+</body>
+</html>
